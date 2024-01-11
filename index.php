@@ -11,7 +11,7 @@
     $factory = new ParserFactory;
 
     try {
-        $parser = $factory->generateObject($argv[2]);
+        $parser = $factory->generateObject('assets/' . $argv[2]);
         $parser->parse();     
     } catch(Exception $error) {
         print_r($error->getMessage());

@@ -18,7 +18,7 @@
         public function __construct($file) {
             $this->file = $file;
             $this->readFileHandle = fopen($this->file, "r");
-            $this->writeFileHandle = fopen(COMBINATION_FILE_NAME, "w");
+            $this->writeFileHandle = fopen('assets/' . COMBINATION_FILE_NAME, "w");
         }
 
         /*
