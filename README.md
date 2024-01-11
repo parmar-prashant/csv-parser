@@ -2,13 +2,25 @@
 
 This project is developed using PHP 8.3 with no external libraries.
 
+## Architecture description
+
+For the first submission, only classes were there without any OOPS concepts. With the current version, concepts such as polymorphism, encapsulation and abstraction are implemented using *Abstract Class* over *Interface* for the following reasons:
+
+- To achieve encapsulation and proper data hiding because an interface only provides public method definitions whereas on the other hand, the Abstract class has provision to define variables and methods with protected and private access specifiers as well along with abstract method definitions.
+- Interface can only have method definitions whereas an Abstract class can have variables, foundation methods and abstract method definitions for child classes.
+
 ## Folder Structure
 
 The project contains three code files as follows:
 
 - *index.php* : This is the starting point of the execution and we will run the project by passing the file name as an argument from the command line (example below).
-- *parser.php* : It contains the main logic of parsing the given CSV file as an input source.
+- *ParserFactory.php* : This class file works as a factory generating parser class objects based on the file extension.
+- *CsvTsvFileParser.php* : Class extending *Parser Abstract Class* and containing logic to parse CSV or TSV files.
+- *JsonFileParser.php* : Class extending *Parser Abstract Class* and provision to add logic to parse JSON files in future.
+- *XmlFileParser.php* : Class extending *Parser Abstract Class* and provision to add logic to parse XML files in future.
+- *Parser.php* : Class file containing a template for different file type parser classes along with foundation properties and methods which can be used by child classes.
 - *constatns.php* : All the static values e.g. Error messages are defined here for better code management and reusability.
+- *parser_old.php* : Contains logic for the first submission.
 
 ## How to run the project
 
@@ -22,8 +34,8 @@ You can run the project by passing a CSV or TSV file as an argument as follows:
 
 ## Note
 
-- Please place the input files in the same folder as code files.
+- Please place the input files in the assets folder.
 - *--unique-combinations* is not passed as a parameter. But the file name is used from *constants.php* and can be changed as per the requirement.
-- While execution, if any exception is generated, the *combination_count.csv* file be deleted and an exception message will be displayed.
+- While execution, if an exception is generated, the *combination_count.csv* file will be deleted and an exception message will be displayed.
 
 
