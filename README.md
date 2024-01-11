@@ -31,6 +31,8 @@ You can run the project by passing a CSV or TSV file as an argument as follows:
 - `php index.php --filename comma_less.csv;` Tested CSV file with less number of records
 - `php index.php --filename comma_missing_heading.csv;` Tested CSV file with missing mandatory headers
 - `php index.php --filename tab_missing_heading.tsv;` Tested TSV file with missing mandatory headers
+- `php index.php --filename test.json;` Tested JSON file which will print *JSON file parser!*
+- `php index.php --filename test.xml;` Tested XML file which will print *XML file parser!*
 
 ## Note
 
