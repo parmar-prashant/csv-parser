@@ -2,14 +2,16 @@
 
     /*
     * Author:    Prashant Parmar
-    * Created:   14/12/2023
+    * Created:   10/12/2023
+    * Updated:   11/01/2024
     */
 
-    include_once('parser.php');
+    include_once('ParserFactory.php');
 
-    $parser = new Parser($argv[2]);
+    $factory = new ParserFactory;
 
     try {
+        $parser = $factory->generateObject($argv[2]);
         $parser->parse();     
     } catch(Exception $error) {
         print_r($error->getMessage());
