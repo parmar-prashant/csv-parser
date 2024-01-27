@@ -1,4 +1,4 @@
-# The Big Phone Store - Interview Project
+# The Big Phone Store - Backend Test Project
 
 This project is developed using PHP 8.3 with no external libraries.
 
