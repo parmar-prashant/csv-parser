@@ -39,5 +39,6 @@ You can run the project by passing a CSV or TSV file as an argument as follows:
 - Please place the input files in the assets folder.
 - *--unique-combinations* is not passed as a parameter. But the file name is used from *constants.php* and can be changed as per the requirement.
 - While execution, if an exception is generated, the *combination_count.csv* file will be deleted and an exception message will be displayed.
+- For Dependency Injection, I could not find a probable use case for the latest implementation as I have covered all the code reusability visa *Parser.php*. If *Parser.php* was not there then I would create a data reader class (Injectable) which will read from any source type (configurable) and inject it in all the classes such as *CsvTsvFileParser.php* or *JsonFileParser.php* or *XmlFileParser.php*.
 
 
