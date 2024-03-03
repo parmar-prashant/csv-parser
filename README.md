@@ -1,4 +1,4 @@
-# The Big Phone Store - Backend Test Project
+# CSV parser
 
 This project is developed using PHP 8.3 with no external libraries.
 
